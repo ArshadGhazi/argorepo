@@ -10,7 +10,7 @@ spec:
     server: https://kubernetes.default.svc
     namespace: default
   source:
-    repoURL: 'https://github.com/ArshadGhazi/argorepository.git'
+    repoURL: 'https://github.com/ArshadGhazi/argorepo.git'
     targetRevision: master
     path: .
   project: default
