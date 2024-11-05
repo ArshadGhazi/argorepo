@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: branch2-app
+  namespace: argocd
+  annotations:
+    notifications.argoproj.io/subscribe.on-deployed.slack: argocd-deployments
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  source:
+    repoURL: 'https://github.com/ArshadGhazi/argorepo.git'
+    targetRevision: branch2
+    path: newone/
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
