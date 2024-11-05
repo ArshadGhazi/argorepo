@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: branch006-test
+        app: branch005-test
     spec:
       containers:
         - name: nginx
