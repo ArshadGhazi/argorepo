@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: branch2-test
+  name: branch3-test
   labels:
-    app: branch2-test
+    app: branch3-test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: branch2-test
+      app: branch3-test
   template:
     metadata:
       labels:
-        app: branch2-test
+        app: branch3-test
     spec:
       containers:
         - name: nginx
