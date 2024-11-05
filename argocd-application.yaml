@@ -4,7 +4,7 @@ metadata:
   name: branch-app
   namespace: argocd
   annotations:
-    notifications.argoproj.io/subscribe.on-rollout-step-completed: argocd-deployments
+    notifications.argoproj.io/subscribe.on-deployed: argocd-deployments
 spec:
   destination:
     server: https://kubernetes.default.svc
