@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: test-app
+  name: branch-app
   namespace: argocd
   annotations:
     notifications.argoproj.io/subscribe.on-deployed.slack: argocd-deployments
@@ -10,8 +10,8 @@ spec:
     server: https://kubernetes.default.svc
     namespace: default
   source:
-    repoURL: 'https://github.com/ArshadGhazi/argorepository.git'
-    targetRevision: HEAD
+    repoURL: 'https://github.com/ArshadGhazi/argorepo.git'
+    targetRevision: branch2
     path: .
   project: default
   syncPolicy:
