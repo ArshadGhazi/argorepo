@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: branch007-test
+  name: branch008-test
   labels:
-    app: branch007-test
+    app: branch008-test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: branch007-test
+      app: branch008-test
   template:
     metadata:
       labels:
-        app: branch007-test
+        app: branch008-test
     spec:
       containers:
         - name: nginx
